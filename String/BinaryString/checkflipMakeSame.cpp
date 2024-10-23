@@ -19,7 +19,7 @@ using namespace std ;
 //     for(char c : s){
 //         (c == '0') ? zeros++ : ones++;
 //     }
-//     return (zeros == 1 || ones == 0);
+//     return (zeros == 1 || ones == 1);
 
 // }
 // int main(){
@@ -48,7 +48,7 @@ bool canMakeAllSame(string &s) {
 
 // Driver code
 int main() {
-    string s = "1110";
+    string s = "10";
     canMakeAllSame(s) ? cout << "Yes\n" : cout << "No\n";
     return 0;
 }

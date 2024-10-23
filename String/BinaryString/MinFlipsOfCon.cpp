@@ -4,6 +4,7 @@
 // so string consist of all 0's.
 // Input : 010101100011
 // Output : 4
+//  in these question u find the min flip the sequence 
 #include <bits/stdc++.h>
 using namespace std;
 int minFlip(char *a, int l){
