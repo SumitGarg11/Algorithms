@@ -57,7 +57,7 @@ This happens where one method, say method A, calls another method B, which then 
  
 Recursion is a powerful technique that can be used to solve a wide variety of problems. However, it is important to use recursion carefully, as it can lead to stack overflows if not used properly.
 
-Recursion should be used when:
+Recursion should be used when 
 
 The problem can be broken down into smaller subproblems that can be solved recursively.
 The base case is easy to identify.
