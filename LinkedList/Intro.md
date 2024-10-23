@@ -100,3 +100,27 @@ A pointer to the next node (next)
 A pointer to the previous node (prev)
 ```
 ![Doubly Linked List](./image.png)
+
+# Operations on the DoublyLinkedList
+# Traversal
+```bash
+
+Traversal in Doubly Linked List
+To Traverse the doubly list, we can use the following steps:
+
+a. Forward Traversal:
+
+Initialize a pointer to the head of the linked list.
+While the pointer is not null:
+Visit the data at the current node.
+Move the pointer to the next node.
+
+b. Backward Traversal:
+
+Initialize a pointer to the tail of the linked list.
+While the pointer is not null:
+Visit the data at the current node.
+Move the pointer to the previous node.
+```
+# Insertion at the Beginning in Doubly Linked List
+![Doubly Linked List](./image2.png)
