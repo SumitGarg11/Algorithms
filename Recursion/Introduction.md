@@ -52,3 +52,14 @@ This happens where one method, say method A, calls another method B, which then 
 
  The recursive call is the last statement.
  ```
+ # When to Use Recursion?
+ ```bash
+ 
+Recursion is a powerful technique that can be used to solve a wide variety of problems. However, it is important to use recursion carefully, as it can lead to stack overflows if not used properly.
+
+Recursion should be used when:
+
+The problem can be broken down into smaller subproblems that can be solved recursively.
+The base case is easy to identify.
+The recursive calls are tail recursive.
+```
