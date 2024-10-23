@@ -24,6 +24,49 @@ void insertAtHead(Node* &head, Node* &tail, int data){
     }
     
 }
+void insertAtTail(Node* &head, Node* &tail, int data){
+    Node* newNode = new Node(data);
+    if(head == NULL){
+        head = newNode;
+        tail = newNode;
+    }
+    else{
+        tail->next= newNode;
+        newNode->prev = tail;
+        tail= newNode;
+    }
+    
+}
+void insertAtpos(Node* &head, Node* &tail, int pos, int data){
+    Node* newNode = new Node(data);
+    if(pos <0){
+        cout<<"Invalid position"<<endl;
+        return;
+    }
+    if(pos == 0){
+        return insertAtHead(head, tail, data);
+    }
+    if(pos == 5){
+        return insertAtTail(head, tail, data);
+    }
+    if(head == NULL){
+        head = newNode;
+        tail = newNode;
+    }
+    else{
+        int count = 1;
+        Node* temp = head;
+        while(count <= pos ){
+            temp = temp->next;
+            count++;
+        }
+        temp->next = newNode;
+        newNode->prev = temp;
+        newNode->next = temp->next->next;
+
+    }
+
+}
 void traverseForward(Node* head, Node* tail){
     if(head==NULL) return;
     Node* temp = head;
@@ -54,5 +97,13 @@ int main(){
         insertAtHead(head, tail, data);
     }
     traverseForward(head,tail);
-    traverseBackward(head,tail);
+    insertAtTail(head, tail, 2000);
+    traverseForward(head,tail);
+    insertAtpos(head, tail, 2, 500);
+    traverseForward(head,tail);
+    insertAtpos(head, tail,5,7000);
+    traverseForward(head,tail);
+    insertAtpos(head, tail,0,1000);
+    traverseForward(head,tail);
+    
 }

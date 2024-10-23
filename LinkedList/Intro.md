@@ -124,3 +124,33 @@ Move the pointer to the previous node.
 ```
 # Insertion at the Beginning in Doubly Linked List
 ![Doubly Linked List](./image2.png)
+
+# Insertion at the End in Doubly Linked List
+![Doubly Linked List](./image3.png)
+
+```bash
+To insert a new node at the end of the doubly linked list, we can use the following steps:
+
+- Allocate memory for a new node and assign the provided value to its data field.
+- Initialize the next pointer of the new node to nullptr.
+- If the list is empty:
+- Set the previous pointer of the new node to nullptr.
+- Update the head pointer to point to the new node.
+- If the list is not empty:
+- Traverse the list starting from the head to reach the last node.
+- Set the next pointer of the last node to point to the new node.
+- Set the previous pointer of the new node to point to the last node.
+```
+# Insertion at the Any Pos  in Doubly Linked List
+![Doubly Linked List](./image4.png)
+
+```bash
+- To insert a new node at a specific position,
+
+- If position = 1, create a new node and make it the head of the linked list and return it.
+- Otherwise, traverse the list to reach the node at position – 1, say curr.
+- If the position is valid, create a new node with given data, say new_node.
+- Update the next pointer of new node to the next of current node and prev pointer of new node to current - - node, new_node->next = curr->next and new_node->prev = curr.
+- Similarly, update next pointer of current node to the new node, curr->next = new_node.
+- If the new node is not the last node, update prev pointer of new node’s next to the new node,   new_node->next->prev = new_node. 
+```
