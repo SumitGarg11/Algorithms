@@ -157,3 +157,93 @@ void indirectRecFun2()
     // Some code...
 }
 ```
+# What Is Tail Recursion ?
+```bash
+Tail recursion is defined as a recursive function in which the recursive call is the last
+statement that is executed by the function. So basically nothing is left to execute after
+the recursion call.
+```
+# Example
+```bash
+static void print(int n)
+{
+    if (n < 0)
+        return;
+    cout << " " << n;
+  
+    // The last executed statement is recursive call
+    print(n - 1);
+}
+```
+# Time Complexity: O(n)
+# Auxiliary Space: O(n)
+# Need for Tail Recursion: 
+```bash
+The tail recursive functions are considered better than non-tail 
+recursive functions as tail-recursion can be optimized by the compiler. 
+
+Compilers usually execute recursive procedures by using a stack. 
+This stack consists of all the pertinent information, including the parameter values, for
+each recursive call. When a procedure is called, its information is pushed onto a stack, and when the function terminates the information is popped out of the stack. Thus for the non-tail-recursive functions, the stack depth (maximum amount of stack space used at any time during compilation) is more. 
+```
+# Tail Call Elimination
+```bash 
+void print(int n) 
+{ 
+start: 
+    if (n < 0)  
+       return; 
+    cout << " " << n; 
+  
+    // Update parameters of recursive call 
+    // and replace recursive call with goto 
+    n = n-1 
+    goto start; 
+}
+
+```
+# Important Note:
+
+```bash
+Tail call elimination reduces the space complexity of recursion from O(N) to O(1).
+As function call is eliminated, no new stack frames are created and the function
+is executed in constant memory space. 
+```
+
+#  A C++ program to demonstrate working of recursion
+```bash 
+include <bits/stdc++.h>
+using namespace std;
+
+void printFun(int test)
+{
+    if (test < 1)
+        return;
+    else {
+        cout << test << " ";
+        printFun(test - 1); // statement 2
+        cout << test << " ";
+        return;
+    }
+}
+
+// Driver Code
+int main()
+{
+    int test = 3;
+    printFun(test);
+}
+```
+# Output 
+```bash
+3 2 1 1 2 3
+```
+```bash
+Time Complexity: O(1)
+Auxiliary Space: O(1)
+
+When printFun(3) is called from main(), memory is allocated to printFun(3) and a local variable test is initialized to 3 and statement 1 to 4 are pushed on the stack as shown in below diagram. It first prints ‘3’. In statement 2, printFun(2) is called and memory is allocated to printFun(2) and a local variable test is initialized to 2 and statement 1 to 4 are pushed into the stack. Similarly, printFun(2) calls printFun(1) and printFun(1) calls printFun(0). printFun(0) goes to if statement and it return to printFun(1). The remaining statements of printFun(1) are executed and it returns to printFun(2) and so on. In the output, values from 3 to 1 are printed and then 1 to 3 are printed. The memory stack has been shown in below diagram.
+```
+![recursion](./Images/image.png)
+
+
