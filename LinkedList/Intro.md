@@ -99,7 +99,7 @@ Data
 A pointer to the next node (next)
 A pointer to the previous node (prev)
 ```
-![Doubly Linked List](./image.png)
+![Doubly Linked List](./picture/image.png)
 
 # Operations on the DoublyLinkedList
 # Traversal
@@ -123,10 +123,10 @@ Visit the data at the current node.
 Move the pointer to the previous node.
 ```
 # Insertion at the Beginning in Doubly Linked List
-![Doubly Linked List](./image2.png)
+![Doubly Linked List](./picture/image2.png)
 
 # Insertion at the End in Doubly Linked List
-![Doubly Linked List](./image3.png)
+![Doubly Linked List](./picture/image3.png)
 
 ```bash
 To insert a new node at the end of the doubly linked list, we can use the following steps:
@@ -142,7 +142,7 @@ To insert a new node at the end of the doubly linked list, we can use the follow
 - Set the previous pointer of the new node to point to the last node.
 ```
 # Insertion at the Any Pos  in Doubly Linked List
-![Doubly Linked List](./image4.png)
+![Doubly Linked List](./picture/image4.png)
 
 ```bash
 - To insert a new node at a specific position,
@@ -154,3 +154,27 @@ To insert a new node at the end of the doubly linked list, we can use the follow
 - Similarly, update next pointer of current node to the new node, curr->next = new_node.
 - If the new node is not the last node, update prev pointer of new node’s next to the new node,   new_node->next->prev = new_node. 
 ```
+# What is a Circular Linked List?
+```bash
+
+A circular linked list is a special type of linked list where all the nodes are connected to form a circle. Unlike a regular linked list, which ends with a node pointing to NULL, the last node in a circular linked list points back to the first node. This means that you can keep traversing the list without ever reaching a NULL value.
+```
+
+# Types of Circular Linked Lists
+```bash
+We can create a circular linked list from both singly linked lists and doubly linked lists. So, circular linked list are basically of two types:
+```
+# 1. Circular Singly Linked List
+```bash
+In Circular Singly Linked List, each node has just one pointer called the “next” pointer. The next pointer of last node points back to the first node and this results in forming a circle. In this type of Linked list we can only move through the list in one direction.
+
+```
+
+![Circular Linked List](./picture/image5.png)
+
+# 2. Circular Doubly Linked List:
+```bash
+
+In circular doubly linked list, each node has two pointers prev and next, similar to doubly linked list. The prev pointer points to the previous node and the next points to the next node. Here, in addition to the last node storing the address of the first node, the first node will also store the address of the last node.
+```
+![Circular Linked List](./picture/image6.png)

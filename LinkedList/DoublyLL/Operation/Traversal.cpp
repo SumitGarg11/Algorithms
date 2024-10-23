@@ -56,17 +56,21 @@ void insertAtpos(Node* &head, Node* &tail, int pos, int data){
     else{
         int count = 1;
         Node* temp = head;
-        while(count <= pos ){
+        while(count < pos-1 ){
             temp = temp->next;
             count++;
         }
+        
+        Node* curr = temp->next;
+        newNode->prev =temp;
         temp->next = newNode;
-        newNode->prev = temp;
-        newNode->next = temp->next->next;
+        newNode->next= curr;
+        curr->prev= newNode;
 
     }
 
 }
+
 void traverseForward(Node* head, Node* tail){
     if(head==NULL) return;
     Node* temp = head;
