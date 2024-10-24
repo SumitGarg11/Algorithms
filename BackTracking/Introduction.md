@@ -65,7 +65,7 @@ the following characteristics:
 ```bash
 Backtracking algorithms are used in a wide variety of applications, including:
 
-Solving puzzles (e.g., Sudoku, crossword puzzles)
+Solving puzzles (e.g, Sudoku, crossword puzzles)
 Finding the shortest path through a maze
 Scheduling problems
 Resource allocation problems
