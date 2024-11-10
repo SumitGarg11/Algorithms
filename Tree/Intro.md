@@ -82,3 +82,55 @@ into a linked list as a result, with each node linking to its single child.
 ![Tree](./images/image1.png)
 # Time Complexity: O(N)
 # Auxiliary Space: O(N)
+
+# On the basis of Completion of Levels
+- Complete Binary Tree
+- Perfect Binary Tree
+- Balanced Binary Tree
+
+# What is a Complete Binary Tree?
+```bash
+A complete binary tree is a special type of binary tree 
+where all the levels of the tree are filled completely 
+except the lowest level nodes which are filled from as left as possible.
+```
+![Tree](./images/image2.png)
+
+# Degree of a node :
+```bash
+Number of children of a particular parent. 
+Example 
+``` 
+- Degree of A is 2 
+- Degree of C is 1.
+- Degree of D is 0.
+
+# Level
+- Count nodes in a path to reach a destination node. 
+- Example- Level of node D is 2 as nodes A and B form the path.
+# Height
+- Number of edges to reach the destination node,
+- Root is at height 0. Example – Height of node E is 2 as it has two edges from the root.
+# Binary Search Tree
+```bash
+A Binary Search Tree  is a data structure used in 
+computer science for organizing and storing data in a sorted manner. 
+Each node in a Binary Search Tree has at most two children, a 
+left child and a right child, with the left child containing 
+values less than the parent node and the right child containing 
+values greater than the parent node. This hierarchical structure 
+allows for efficient searching, insertion, and deletion operations
+ on the data stored in the tree.
+```
+# AVL Tree:
+```bash
+AVL tree is a self-balancing Binary Search Tree 
+where the difference between 
+heights of left and right subtrees cannot be more than one for all nodes. 
+```
+![tree](./images/image3.png)
+- To Find The Height : Count the edges to the destination node
+- To Find The Level : Count the nodes to the destination node
+```bash
+The height of an AVL tree is always O(log(n)) where n is the number of nodes in the tree.
+```

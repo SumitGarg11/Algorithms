@@ -48,6 +48,7 @@ void printLeaves(Node* root){
     if(!(root->left) && !(root->right)){
         cout<<root->data<<" ";
     }
+    // mene galthi ki thi ki m right m tho gya hii nhi tha 
     printLeaves(root->right);
     
 
