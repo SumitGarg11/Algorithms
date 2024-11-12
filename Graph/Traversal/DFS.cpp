@@ -19,6 +19,31 @@ class Solution{
        return ans;
     }
 };
+
+class Solution1 {
+  public:
+    // Function to return a list containing the DFS traversal of the graph.
+    void dfs(int node,vector<vector<int>>& adj,  vector<int> &vis,  vector<int> & dfsAns ){
+        vis[0] =1 ;
+        dfsAns.push_back(node);
+        for(auto it : adj[node]){
+            if(!vis[it]){
+                vis[it] =  1;
+                dfs(it, adj,vis,dfsAns);
+            }
+        }
+    }
+    vector<int> dfsOfGraph(vector<vector<int>>& adj) {
+        // Code here
+        int V = adj.size();
+        vector<int> vis(V,0);
+        
+        int start = 0;
+        vector<int> dfsAns;
+        dfs(start,adj,vis,dfsAns);
+        return dfsAns;
+    }
+};
 int main(){
     int n,m;
     cin >> n >> m;
@@ -36,3 +61,11 @@ int main(){
     }
     return 0;
 }
+
+//  adj = [[2,3,1], [0], [0,4], [0], [2]]
+// output - [0, 2, 4, 3, 1]
+//           0
+//        /  |   \
+//       2   3    1
+//       |
+//       4
