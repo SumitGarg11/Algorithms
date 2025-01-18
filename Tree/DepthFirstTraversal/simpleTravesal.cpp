@@ -1,9 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
-// create the Node;
 class Node{
     public:
     int data;
@@ -56,6 +53,5 @@ int main(){
     cout<<"PostOrder Traversal: ";
     postOrder(root);
     cout<<endl;
-
     return 0;
 }
