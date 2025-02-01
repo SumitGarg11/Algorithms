@@ -7,7 +7,6 @@ vector<int> topo;
 void kahnAlgo()
 {
     queue<int> q;
-    // check which vertex have indeg zero
     for (int i = 1; i <= n; i++)
     {
         if (indeg[i] == 0)

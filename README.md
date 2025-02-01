@@ -1,1 +1,24 @@
 # Algorithms
+- find min in sorted rotated array 
+- square root of x 
+- find peak element 
+- first bad version 
+- aggressive cows
+- koko eating banana
+- ship packaginig 
+- kth smallest number in mupltiple table 
+- maximum consecutive number 3
+- ugly number 
+- max job profit schduling 
+- find two non overlapping array 
+- random peak with weight 
+- snapshot array
+- find two non overlapping array  with target
+- swim in target water 
+- smallest rectangle inclosing pixel 
+- median o
+- russian 
+- 1671
+- minimium reduction x to 0
+- parttiation array of two array 
+- count inversion array

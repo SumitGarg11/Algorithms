@@ -27,6 +27,8 @@ int rec(int level)
         {
             queen[level] = ch;
             ans += rec(level + 1);
+            // imp 
+            queen[level] = -1; 
         }
     }
     return ans;
