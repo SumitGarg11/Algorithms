@@ -27,6 +27,7 @@ Node* createTree(){
     return node;
     
 }
+
 void inOrder(Node* root){
     if(root == NULL) return;
     inOrder(root->left);
