@@ -27,3 +27,7 @@ class Solution {
     }
    
 };
+
+// vector<int> dp(n+1, 0); ➝ O(n)
+// unordered_map<char, int> lastOcc; ➝ O(1) average case (O(n) worst case)
+// The for loop runs from 1 to n:
