@@ -3,6 +3,21 @@ using namespace std;
 class Solution
 {
 public:
+   void bfs(int node, int vis[], vector<int> adjList[]){
+    vis[node] = 1;
+    queue<int> q;
+    q.push(node);
+    while(!q.empty()){
+      int nodee = q.front();
+      q.pop();
+      for(auto it : adjList[nodee]){
+        if(!vis[it]){
+          vis[it] = 1;
+          q.push(it);
+        }
+      }
+    }
+   }
    void dfs(int node, int vis[], vector<int> adjList[]){
     vis[node] = 1;
     for(auto it : adjList[node]){
@@ -30,7 +45,8 @@ public:
       for(int i =0; i<V; i++){
         if(!vis[i]){
           count++;
-          dfs(i,vis,adjList);
+          // dfs(i,vis,adjList);
+          bfs(i,vis,adjList);
         }
       }
       return count;
