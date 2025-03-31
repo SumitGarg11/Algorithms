@@ -26,4 +26,10 @@ public:
         return maxLen;
         
     }
+
 };
+
+// The time complexity of this algorithm is O(N) where N is the length of the string.
+// We use two pointers and an unordered set to track unique characters in the current window
+// The space complexity is O(K) where K is the size of the longest unique substring. 
+// We only store unique characters, making the operations efficient.
