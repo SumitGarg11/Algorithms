@@ -23,3 +23,26 @@ public:
         return s.substr(sp,maxLen);
     }
 };
+
+// 🚀 How to Explain in an Interview:
+// 👤 Interviewer: Can you explain the time and space complexity of your approach?
+
+// 🗨️ You:
+
+// "This approach generates all possible substrings using two nested loops, resulting in 
+// O(n2) iterations. For each substring, we check if it's a palindrome using a recursive function, which takes 
+
+// O(n) time in the worst case. Thus, the overall time complexity is 
+// O(n3).
+// The space complexity is 
+
+// O(n) due to the recursive function call stack, but it can be reduced to 
+
+// O(1) with an iterative approach."
+
+// 👤 Interviewer: Can this be optimized?
+
+// 🗨️ You:
+
+// "Yes! A better approach is the expand around center method, reducing the time complexity to 
+// O(n2) or using Dynamic Programming to achieve the same complexity but with memoization."
